@@ -1,0 +1,23 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using AutoMapperMvc.Dto
+@model ICollection<CategoryDto>
+
+<table class="table table-bordered text-center"> 
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var item in Model)
+       {
+         <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+         </tr>
+       }
+    </tbody>
+</table>
